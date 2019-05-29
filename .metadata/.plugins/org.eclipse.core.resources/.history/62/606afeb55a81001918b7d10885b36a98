@@ -1,0 +1,24 @@
+package com.bae.Blackjack.MainApp;
+
+import java.util.Random;
+
+public class BlackJack {
+public static void main(String[] args) {
+	
+	
+	
+
+}	
+public int play(int player, int dealer) {
+
+if (player >dealer &&player <22 &&dealer >4) {
+	return player;
+}
+else if ((dealer >player && dealer <22 && dealer >4)|| player >21 && dealer <21 ) {
+	return dealer;
+}
+else{
+
+	return -1;
+}}
+}

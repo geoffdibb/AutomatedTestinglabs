@@ -1,0 +1,29 @@
+package seltestartifactTests;
+
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class SelTestClass {
+	static WebDriver driver;
+	
+
+	@BeforeClass
+	public void setup() {
+	System.setProperty("webdriver.chrome.driver","C:\\Program Files (x86)/chromedriver.exe");
+	 driver = new ChromeDriver();
+}
+
+@After
+public void teardown() {
+	driver.quit();
+}
+
+@Test
+public void methodTest() {
+	driver.manage().window().maximize();
+	driver.get(www.google.com);
+}
+
+}

@@ -1,0 +1,12 @@
+package seltestartifactTests;
+
+import org.junit.Before;
+
+public class SelTestClass {
+
+	@Before
+	public void drivermeth() {
+	System.setProperty("webdriver.chrome.driver","C:\\Program Files (x86)/chromedriver.exe");
+	 ChromeDriver driver = new ChromeDriver();
+}
+}

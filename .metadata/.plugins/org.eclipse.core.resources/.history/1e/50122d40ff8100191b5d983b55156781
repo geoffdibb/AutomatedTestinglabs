@@ -1,0 +1,46 @@
+package TheDemoSiteTest;
+
+import org.junit.After;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class TheDemoSiteTest {
+	static WebDriver driver;
+	
+
+	@BeforeClass
+	public static void setup() {
+	System.setProperty("webdriver.chrome.driver","C:\\Program Files (x86)/chromedriver.exe");
+	 driver = new ChromeDriver();
+}
+
+@After
+public void teardown() {
+	driver.quit();
+}
+
+@Test
+public void methodTest() {
+	driver.manage().window().maximize();
+	driver.get("http://thedemosite.co.uk/");
+	WebElement addAUser = driver.findElement(By.xpath("/html/body/div/center/table/tbody/tr[2]/td/div/center/table/tbody/tr/td[2]/p/small/a[3]"));
+addAUser.click();
+
+	WebElement usernameEntry = driver.findElement(By.xpath("/html/body/table/tbody/tr/td[1]/form/div/center/table/tbody/tr/td[1]/div/center/table/tbody/tr[1]/td[2]/p/input"));
+
+	usernameEntry.sendKeys("OustandingUserName");
+	WebElement passwordEntry = driver.findElement(By.xpath("/html/body/table/tbody/tr/td[1]/form/div/center/table/tbody/tr/td[1]/div/center/table/tbody/tr[2]/td[2]/p/input"));
+passwordEntry.sendKeys("Password4");
+WebElement EnterUseButton = driver.findElement(By.xpath("/html/body/table/tbody/tr/td[1]/form/div/center/table/tbody/tr/td[1]/div/center/table/tbody/tr[3]/td[2]/p/input"));
+EnterUseButton.click();
+WebElement EnterUseButton = driver.findElement(By.xpath("/html/body/div/center/table/tbody/tr[2]/td/div/center/table/tbody/tr/td[2]/p/small/a[4]"));
+
+
+
+}
+
+}
