@@ -1,9 +1,0 @@
-package seltestartifactTests;
-
-public class SelTestClass {
-
-	@Before;
-	public drivermeth() {
-	System.setProperty("websriver.chrome.driver","C:\\Development\\chromedriver_win32/chromedriver.exe");
-	driver = new ChromeDriver();
-}}
