@@ -1,5 +1,7 @@
 package TheDemoSiteTest;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.After;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -8,7 +10,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import junit.framework.Assert;
 
 public class TheDemoSiteTest {
 	static WebDriver driver;
@@ -50,7 +51,7 @@ WebElement loginButton = driver.findElement(By.xpath("/html/body/table/tbody/tr/
 loginButton.click();
 
 try {
-	Thread.sleep(20000);
+	Thread.sleep(2000);
 } catch (InterruptedException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
@@ -58,7 +59,7 @@ try {
 
 WebElement textSuccess = driver.findElement(By.xpath("/html/body/table/tbody/tr/td[1]/big/blockquote/blockquote/font/center/b"));
 
-textSuccess.getText("Successful");
+assertEquals("**Successful Login**", textSuccess.getText());
 }
 
 }
