@@ -13,7 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class TheDemoSiteTest {
 	static WebDriver driver;
-	
+
 
 	@BeforeClass
 	public static void setup() {
